@@ -67,11 +67,11 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('-i', '--input_dir', help='input directory with source images')
     ap.add_argument('-o', '--output_file', help='output file')
-    ap.add_argument('-c', '--credits', action='store_true', help='enable watermark credit to audio creator')
+    ap.add_argument('-nc', '--no_credits', action='store_false', help='Disable watermark credit to audio creator')
     ap.add_argument('-v', '--audio-version', default='2', help='Version of laughter (v.1 for "look at his head", v2 for just laugh)')
     args = ap.parse_args()
 
     assert args.input_dir is not None, 'No input file provided...'
     assert args.output_file is not None, 'No output file provided...'
 
-    main(args.input_dir, args.output_file, args.credits, args.audio_version)
+    main(args.input_dir, args.output_file, args.no_credits, args.audio_version)
