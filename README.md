@@ -11,6 +11,13 @@ first 12 files to determine the order of the slideshow.
 python latd.py -i src/ -o data/look_at_this_dude.mp4
 ```
 
+## optional parameters
+
+Arg | Description | Default
+:------- | :---------- | :----------
+--no\_credits, -nc | Disable credits watermark. | false
+--audio\_version, -v | Version of laughter (v.1 for "look at his head etc.", v2 for just laugh) | 2
+
 ## dependencies
 
 (mac)
